@@ -20,4 +20,31 @@ dim(x)
 #---------------
   
 
+x<-1:10
+x
+attributes(x)
+x<-c(1:10)
+x
+attributes(x)
+
+#----------------
+
+
+y<-c(1,2,NA,NaN)
+y
+
+is.na(y)
+is.nan(y)
+
+y<-sqrt(-9)
+y
+
+Inf-Inf
+Inf+Inf
+
+#---------
+
+matrix(nrow=2,ncol=3,1:6)
+
+
 
