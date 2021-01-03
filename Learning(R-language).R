@@ -50,3 +50,27 @@ c(1,"a",3)
 c(1,3.5)
 
 data.frame(S.No=1:4,Items=c("Pizza","Burger","Fries","Coke"),Price_per_unit=c(200,80,50,60),Units=c(4,2,3,4),Total=c(800,160,150,240),GrandTotal=c("","","",1350))
+
+#---------------
+
+length(c(1,2,3,4,"a",3.5,T))
+c(1,2,3,4,"a",3.5,T)
+
+x<-c(1,2,3,4)
+y<-c(4,5,6,7)
+z<-c(x,y)
+z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
