@@ -61,8 +61,8 @@ y<-c(4,5,6,7)
 z<-c(x,y)
 z
 
-
-
+x<-data.frame(c(1,3),c(T,F))
+x
 
 
 
