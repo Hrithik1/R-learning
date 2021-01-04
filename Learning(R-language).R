@@ -61,16 +61,46 @@ y<-c(4,5,6,7)
 z<-c(x,y)
 z
 
-x<-data.frame(c(1,3),c(T,F))
+x<-data.frame(A=c(1,3),B=c(T,F))
 x
+nrow(x)
+ncol(x)
+
+#------------
 
 
+x<-1:3
+x
+attributes(x)
+names(x)<-c("A","B","C")
+x
+names(x)
+attributes(x)
+attributes(names(x))
 
+x<-matrix(1:9,nrow=3,ncol=3)
+x
+attributes(x)
+dimnames(x)<-list(c("A","B","C"),c("X","Y","Z"))
+x
+dimnames(x)
+attributes(x)
 
+#-------------Dput and Dump
 
+x<-data.frame(a=1,b="a")
+dput(x)
+dput(x,file="hrk.R")
+new.x<-dget("hrk.R")
+new.x
 
+y<-data.frame(a=1,b="A")
+dput(y,file="learn.R")
+new.y<-dget("learn.R")
+new.y
 
-
-
+v<-data.frame(c=2,d="B") #Error
+dump(v,file="learn.R")
+source("learn.R")
 
 
