@@ -164,13 +164,29 @@ a<-function(x,y){
 }
 
 
+c<-3
+for(i in range(1:10))
+{
+  i
+  i=i+1
+}
+i
+
+i<-rnorm(1,5)  # Normal random distribution upto 5 numbers
+i
 
 
+#--------------
 
 
+i<-list(a=1:10,b=c(1,2,3,4,5),c=5)
+lapply(i,mean)
 
+x<-1:3
+lapply(x,runif,min=4,max=10)  #lapply returns list
 
-
+x<-list(a=11:1,b=rnorm(3,2)) 
+sapply(x,mean)               # sapply returns vector(Single line)
 
 
 
