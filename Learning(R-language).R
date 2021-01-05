@@ -103,4 +103,74 @@ v<-data.frame(c=2,d="B") #Error
 dump(v,file="learn.R")
 source("learn.R")
 
+c<-file("test.txt","r")
+d<-read.csv(c)
+d
+
+c<-url("https://hrithik2kedits.blogspot.com","r")
+d<-readLines(c)
+head(d)  #Make sure to use head(d) which return first 6 rows(by default) . Don't print d simply ..
+tail(d)  # same
+#---------------
+
+
+c<-0
+while(c<10)
+{
+  print(c)
+  c<-c+1
+  # c<-++c  Infinite loop --
+}
+
+c<-c(1,NaN,NA,4,5)
+is.na(c)
+is.nan(c)
+
+# How to remove NA and NaN values --
+
+x<-c(1,NA,NaN,2,3,4)
+y<-is.na(x)
+y
+x[!y]
+
+x<-c(1,NaN,NA,5,7,9,0)  
+y<-is.nan(x)             # here NA value will not be removed as is.nan() removes only NaN values and is.na() removes all NA as well as NaN values.
+y
+x[!y]
+
+
+# Functions --
+
+sum_of_two<-function(x,y)
+{
+  z<-x+y
+  z
+}
+
+above<-function(x,n)
+{
+  u<-x>n  # Returns False(0) if x<n and returns the number(x) if True.
+  x[u]
+}
+
+c<-T  # Typecasting 
+c
+as.integer(c)
+
+
+a<-function(x,y){
+  t<-x<y          # Returns FALSE if x>n and returns TRUE if True.
+  t
+}
+
+
+
+
+
+
+
+
+
+
+
 
