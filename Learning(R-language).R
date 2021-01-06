@@ -102,6 +102,7 @@ new.y
 v<-data.frame(c=2,d="B") #Error
 dump(v,file="learn.R")
 source("learn.R")
+traceback()
 
 c<-file("test.txt","r")
 d<-read.csv(c)
@@ -188,5 +189,77 @@ lapply(x,runif,min=4,max=10)  #lapply returns list
 x<-list(a=11:1,b=rnorm(3,2)) 
 sapply(x,mean)               # sapply returns vector(Single line)
 
+
+x<-matrix(rnorm(200),20,10)
+apply(x,c(1,2),mean)
+
+
+x<-rep(4,3)
+x
+   #OR
+mapply(rep,1:6,6:1)  
+
+x<-function(n,m,sd)
+{
+  rnorm(n,m,sd)
+}
+
+mapply(x,1:5,1:5,2)  # Works well with vector of args
+         
+          #OR
+list(x(1,1,2),x(2,2,2),x(3,3,2),x(4,4,2),x(5,5,2))  # Using list
+
+x<-matrix(1:10,5,6)
+apply(x,2,mean)
+
+
+rnorm(10,1)
+
+runif(10)
+
+x=matrix(1:10,5,2)
+x
+apply(x,2,sum)
+
+x=function(a,b)
+{
+  na.rm=T    # Not working
+  y=a+b
+  y
+}
+
+
+f<-gl(5,2,17)  #GLIM function generates factor levels 
+f
+
+x<-c(rnorm(15),runif(15),rnorm(15,1))
+x
+y<-gl(9,5)
+y
+
+split(x,y)
+
+
+x<-1:10
+print(x)
+
+mean(r)
+traceback()
+
+#QUIZ
+#1
+library(datasets)
+data(iris)
+iris
+round(mean(iris[which(iris$Species=="virginica"),]$Sepal.Length))
+?iris
+
+round(10.697,1)
+
+#2
+library(datasets)
+data(mtcars)
+?mtcars
+mtcars
 
 
