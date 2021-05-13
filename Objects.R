@@ -59,6 +59,32 @@ dimnames(m)
 m
 
 
+x<-c(1,2,3,1)
+as.character(x)
+
+x<-list(list(list(c("A",2,"C"),3,4),5,6),7,"Hrithik")
+x
+x[[1]][[1]][[1]][[2]]
+
+
+y<-list(list(c(1,"a",4),7),8)
+y
+y[[1]][[1]][[1]]
+
+
+x<-1:5;y<-6:10
+rbind(x,y)
+cbind(x,y)
+
+
+
+
+
+
+
+
+
+
 
 
 
